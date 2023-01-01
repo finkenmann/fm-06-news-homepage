@@ -109,7 +109,7 @@ nav {
 .main-nav {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 1rem;
 
   position: fixed;
   top: 0;
@@ -123,6 +123,17 @@ nav {
   z-index: 1;
 
   transition: transform 1s, outline 1s ease-in 0.5s;
+}
+
+.main-nav a {
+  display: block;
+  padding: 1rem;
+  
+  transition: color 200ms;
+}
+
+.main-nav a:hover {
+  color: var(--clr-primary--500);
 }
 
 .main-nav.open {
@@ -326,8 +337,8 @@ nav {
   }
 
   .main-nav a { 
+    padding: 0;
     color: var(--clr-neutral--500);
-    transition: color 200ms;
   }
 
   .main-nav a:hover { 
