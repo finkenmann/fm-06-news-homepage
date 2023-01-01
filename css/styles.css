@@ -64,6 +64,7 @@ h2 {
 
 h3 {
   font-size: var(--fs-20);
+  line-height: 1.2;
 }
 
 ul {
@@ -162,11 +163,14 @@ nav {
   padding-bottom: 1rem;
 }
 
-.new__title {
-  color: var(--clr-neutral--000);
+.new__title a {
+  color: var(--clr-neutral--100);
+  transition: color 200ms;
 }
 
-
+.new__title a:hover {
+  color: var(--clr-primary--500);
+}
 
 /* highlights */
 .highlight {
@@ -196,6 +200,15 @@ nav {
   margin-block: 0.5em;
   font-size: var(--fs-18);
 }
+
+.highlight__title a {
+  transition: color 200ms;
+}
+
+.highlight__title a:hover {
+  color: var(--clr-primary--500);
+}
+
 
 
 
@@ -269,6 +282,8 @@ nav {
   letter-spacing: 0.25em;
   text-transform: uppercase;
   color: var(--clr-neutral--000);
+
+  transition: background-color 200ms;
 }
 
 .btn:hover {
@@ -295,6 +310,10 @@ nav {
   }
   
   /* main-nav */
+  nav {
+    min-height: 8rem;
+  }
+
   .main-nav {
     all: unset;
 
@@ -308,6 +327,7 @@ nav {
 
   .main-nav a { 
     color: var(--clr-neutral--500);
+    transition: color 200ms;
   }
 
   .main-nav a:hover { 
@@ -328,7 +348,8 @@ nav {
   .section--hero {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 2rem;
+    align-content: flex-start;
+    column-gap: 2rem;
     grid-template-areas: 
       "hi hi"
       "ht hb";
